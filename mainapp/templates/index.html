@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content%}
+<marquee width="100%" direction="left" class="bg-primary" style=" font-size: 30px; color: aliceblue;">
+  Special Offer upto 50%.
+   </marquee>
+<div class="">
+  <img src="{% static 'images/banner.jpg' %}" class="img-fluid"
+    alt="Responsive image">
+</div>
+<div class="container"> 
+  <div class="row m-4">
+    <div class="col-4 ">
+      <div class="card p-1" style="width: 100%">
+    <a href="{% url 'Grocery' %}">
+        <img class="card-img-top" src="{% static 'images/photo_2021-04-06_13-18-30.jpg' %}" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Grocery</h5>
+        </div>
+    </a>
+      </div>
+    </div>
+ 
+  
+    <div class="col-4">
+      <div class="card p-1" style="width: 18rem;">
+        <a href="{% url 'Dress' %}">
+        <img class="card-img-top" src="{% static 'images/photo_2021-04-06_13-18-39.jpg' %}" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title"><a href="{% url 'Dress' %}">Dress</h5>
+        </div>
+      </a>
+      </div>
+    </div>
+  <div class="col-4 ">   
+      <div class="card p-1" style="width: 18rem;">
+    <a href="{% url 'Electronics' %}">
+        <img class="card-img-top" src="{% static 'images/photo_2021-04-06_13-18-36.jpg' %}" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Electronics</h5>
+        </div>
+        </a>
+      </div>
+    </div>
+  </a>
+  </div>
+</div>
+<hr>
+
+ 
+{% endblock %}

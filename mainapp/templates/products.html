@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content%}
+<div class="container"> 
+  <h3 class="card-title">{{p.category}}</h3>
+  <div class="row m-4">
+    {% for p in products %}
+        <div class="col-4 ">
+          <div class="card p-1" style="width: 18rem; border: 1px solid black;">
+            <img class="card-img-top" src="{{p.image.url}}" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">{{p.title}}</h5>
+              <h3 class="card-title">Price : {{p.price}}</h3>
+              <h3 class="card-title">Unit left :{{p.Available_Unit}}</h3>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+  
+  
+</div>
+{% endblock %}
